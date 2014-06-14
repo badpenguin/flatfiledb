@@ -1,10 +1,10 @@
 FlatFileDB
 ==========
 
-[![Total Downloads](https://img.shields.io/packagist/dm/fire015/flintstone.svg)](https://packagist.org/packages/fire015/flintstone)
-[![Build Status](https://travis-ci.org/fire015/flintstone.svg?branch=master)](https://travis-ci.org/fire015/flintstone)
-
 PHP Flat File DB library with cache for CMS
+
+More informations are available at http://www.badpenguin.org/
+
 
 ## Why?
 
@@ -30,11 +30,53 @@ Faster websites performs better also in SEO ranking.
 
 ## Road Map
 
-* Database Locking.
+- [ ] Database Locking.
 
-* Disable Locking.
+- [ ] Disable Locking.
 
-## Example
+- [ ] Implement "composer"
 
+
+## Examples
+
+### Opening the DB
 ```
+$cms = FlatFile::open('db/cms.qdbm');
 ```
+
+### Write Post
+```php
+/* Create an Object */
+$post = new stdClass;
+$post->id=5;
+$post->title='my title';
+$post->body='<p>my content</p>';
+$post->last_modified_time = time();
+$post->tags = array('featured','gallery');
+
+$cms->set($post->id,$post);
+if (!$post) die('Save failed');
+```
+
+### Get Post
+```
+$post = $cms->get($post_id);
+if (!$post) die('Post not found');
+```
+
+### Check if Key exists
+```
+	if ($cms->is_valid('manteinance_mode')) die('Website is under manteinance');
+```
+
+### Delete a key
+```
+$cms->delete('manteinance_mode');
+```
+
+
+### Get all data
+```
+print_r($cms->get_all());
+```
+

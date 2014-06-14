@@ -22,6 +22,8 @@ class FlatFileDBTest extends PHPUnit_Framework_TestCase {
 		$this->obj1 = new stdClass;
 		$this->obj1->title='Title';
 		$this->obj1->body='<p>€ 3.599,00'.PHP_EOL.'<b>§@#!</b></p>';
+		$this->obj1->last_modified_time = time();
+		$this->obj1->tags = array('featured','gallery');
 	}
 
 	public function tearDown() {
