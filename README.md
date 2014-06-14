@@ -3,7 +3,7 @@ FlatFileDB
 
 PHP Flat File DB library with cache for CMS
 
-More informations are available at http://www.badpenguin.org/
+More informations are available at http://www.badpenguin.org/php-flatfiledb
 
 
 ## Why?
