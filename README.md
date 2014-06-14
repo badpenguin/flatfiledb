@@ -18,6 +18,8 @@ Faster websites performs better also in SEO ranking.
 
 * Uses "dba" with "qdbm" format.
 
+* "dba" format can be accessed from Perl and from Bash.
+
 ## Features
 
 * DBA is a module so its faster then any self-made implementation.
@@ -40,7 +42,7 @@ Faster websites performs better also in SEO ranking.
 ## Examples
 
 ### Opening the DB
-```
+```php
 $cms = FlatFile::open('db/cms.qdbm');
 ```
 
@@ -59,24 +61,24 @@ if (!$post) die('Save failed');
 ```
 
 ### Get Post
-```
+```php
 $post = $cms->get($post_id);
 if (!$post) die('Post not found');
 ```
 
 ### Check if Key exists
-```
-	if ($cms->is_valid('manteinance_mode')) die('Website is under manteinance');
+```php
+if ($cms->is_valid('manteinance_mode')) die('Website is under manteinance');
 ```
 
 ### Delete a key
-```
+```php
 $cms->delete('manteinance_mode');
 ```
 
 
 ### Get all data
-```
+```php
 print_r($cms->get_all());
 ```
 
