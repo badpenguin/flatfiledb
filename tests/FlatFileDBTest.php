@@ -28,6 +28,13 @@ class FlatFileDBTest extends PHPUnit_Framework_TestCase {
 		FlatFile::close('db/cms.qdbm');
 	}
 
+	public static function tearDownAfterClass()
+	{
+		unlink('db/cms.qdbm');
+		unlink('db/cms.qdbm.lck');
+	}
+
+
 	public function testOpen() {
 	  $this->assertTrue(TRUE);
 	}
