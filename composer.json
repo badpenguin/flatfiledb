@@ -20,6 +20,12 @@
 		"phpunit/phpunit": "3.7.*"
 	},
 	"autoload": {
+		"classmap": ["lib"]
+	},
+	"autoload-dev": {
+		"classmap": ["tests"]
 	}
+
+
 }
 
