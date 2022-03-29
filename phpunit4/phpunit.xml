@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit 
 	colors="true"
-	printerClass="PHPUnit_TextUI_ResultPrinter"
 >
 	<testsuites>
 		<testsuite name="flatfiledb">

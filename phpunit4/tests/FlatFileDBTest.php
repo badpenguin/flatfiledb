@@ -1,9 +1,10 @@
 <?
 
+require_once 'vendor/autoload.php';
 require_once 'lib/FlatFile.php';
 require_once 'lib/FlatFileDB.php';
 
-class FlatFileDBTest extends PHPUnit_Framework_TestCase {
+class FlatFileDBTest extends \PHPUnit\Framework\TestCase {
 
 	private $db = FALSE;
 	private $obj1;
